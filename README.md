@@ -1,2 +1,2 @@
 # crud-bootsfaces
-"CRUD" basic in JSF with framework of design BootsFaces
+Basic "CRUD" in JSF with BootsFaces design framework
