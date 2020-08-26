@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                template="./../other/template-bf.xhtml"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <b:container>
+            <b:form>
+                <b:growl autoUpdate="true" allowDismiss="true"/>
+                <b:panelGrid columns="1" span="6" offset="3">
+                    <b:inputText value="#{beanPerson.person.idCard}" label="ID Card:"
+                                 maxlength="8" type="tel" 
+                                 required="true" autoUpdate="true"/>
+                    <b:inputText value="#{beanPerson.person.firstName}" 
+                                 label="First Name:"/>
+                    <b:inputText value="#{beanPerson.person.lastName}" 
+                                 label="Last Name:"/>
+                    <b:selectOneMenu value="#{beanPerson.person.country}" label="Country:">
+                        <f:selectItem itemValue="PE" itemLabel="Perú" />
+                        <f:selectItem itemValue="ES" itemLabel="España" />
+                        <f:selectItem itemValue="MX" itemLabel="México" />
+                    </b:selectOneMenu>
+                    <h:outputLabel value="Gender" for="idgender"/>
+                    <b:row>
+                        <b:radiobutton value="#{beanPerson.person.gender}" itemValue="M" itemLabel="Man"/>
+                        <b:radiobutton value="#{beanPerson.person.gender}" itemValue="W" itemLabel="Woman"/>
+                    </b:row>
+                    <hr/>
+                    <b:row>
+                        <b:commandButton value="Registrar" look="primary" iconAwesome="fa-save"
+                                         ajax="true" action="#{beanPerson.create()}" span="8"/>
+                        <b:commandButton value="clean" type="reset" iconAwesome="fa-eraser" 
+                                         look="secondary" span="4"/>
+                    </b:row>
+                </b:panelGrid>
+            </b:form>
+        </b:container>
+    </ui:define>
+
+</ui:composition>

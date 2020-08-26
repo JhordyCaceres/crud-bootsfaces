@@ -1,0 +1,7 @@
+pe/jhordyguerra/jsf/bootfaces/model/Person.class
+pe/jhordyguerra/jsf/bootfaces/dao/DaoPerson.class
+pe/jhordyguerra/jsf/bootfaces/JAXRSConfiguration.class
+pe/jhordyguerra/jsf/bootfaces/controller/BeanPerson.class
+pe/jhordyguerra/jsf/bootfaces/service/ServPerson.class
+.netbeans_automatic_build
+pe/jhordyguerra/jsf/bootfaces/dao/DBConnection.class
